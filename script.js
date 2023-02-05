@@ -1,5 +1,5 @@
-function getComputerChoice(max) {
-    let choice = Math.floor(Math.random() * max + 1)
+function getComputerChoice(a= 3) {
+    let choice = Math.floor(Math.random() * a + 1)
     if(choice == 1) { 
         return "Rock"
     } else if(choice == 2) {
@@ -10,4 +10,4 @@ function getComputerChoice(max) {
     }
 
 
-console.log(getComputerChoice(3))
+console.log(getComputerChoice())
