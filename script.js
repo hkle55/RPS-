@@ -9,5 +9,13 @@ function getComputerChoice(a= 3) {
     }
     }
 
-
-console.log(getComputerChoice())
+function playRound(playerChoice, computerChoice) {
+    if(playerChoice == "Rock" && computerChoice == "Paper") {
+        return "Computer wins"
+    }
+}
+let playerChioce = prompt("Rock, Paper Or scissors?")
+let computerChoice = getComputerChoice()
+console.log(playRound(playerChioce,computerChoice))
+console.log(playerChioce)
+console.log(computerChoice)
