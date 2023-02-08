@@ -12,14 +12,19 @@ function getComputerChoice(a= 3) {
 function playRound(playerChoice, computerChoice) {
     if(playerChoice === computerChoice) {
         return alert(`It's a tie! you both chose ${computerChoice}`)
+    } else if(playerChoice == "rock" && computerChoice == "scissors"){
+        return alert(`You win! ${playerChoice} beats ${computerChoice}`)
     }
 
     }
 
-let playerChioce = prompt("Rock, Paper Or scissors?")
-let playerChoice = playerChioce.toLowerCase();
+let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
+let playerChoice = playerChoiceCaseInsen.toLowerCase();
 let computerChoice = getComputerChoice()
+
+
+
 console.log(playRound(playerChoice,computerChoice))
-console.log(playerChioce)
+console.log(playerChoiceCaseInsen)
 console.log(playerChoice)
 console.log(computerChoice)
