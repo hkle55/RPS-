@@ -48,9 +48,12 @@ function game() {
             playerScore++
         } else if(result == 'lose'){
             computerScore++
+        } else {
+            i--
+            continue
         }
-        if(playerScore == 3) {
-            alert(`You win the game!`)
+        if(playerScore === 3 || computerScore === 3){
+            break
         }
     }
 }
