@@ -10,7 +10,7 @@ function getComputerChoice(a= 3) {
     }
 
 function playRound(playerChoice, computerChoice) {
-    const outcome = {
+    const outcomes = {
         rock: {
             scissors: 'win',
             rock: 'tie',
@@ -27,7 +27,7 @@ function playRound(playerChoice, computerChoice) {
             paper: 'win'
         }
     }
-    let result = outcome[playerChoice][computerChoice]
+    let result = outcomes[playerChoice][computerChoice]
     if(result == 'tie'){
         return alert(`It's a tie you both chose ${computerChoice}!`)
     } else if(result == `win`){
