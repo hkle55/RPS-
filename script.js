@@ -46,7 +46,7 @@ function game() {
     let playerScore = 0 
     let computerScore = 0 
     for (let i = 0; i < 5; i++){
-        let result = playRound(playerChoice,computerChoice)
+        let result = playRound()
         if(result == `win`){
             playerScore++
         } else if(result == 'lose'){
@@ -66,6 +66,7 @@ function game() {
     }
 }
 
+game()
 
 
 
