@@ -39,6 +39,21 @@ function playRound(playerChoice, computerChoice) {
    
     }
 
+function game() {
+    let playerScore = 0 
+    let computerScore = 0 
+    for (let i = 0; i < 5; i++){
+        let result = playRound(playerChoice,computerChoice)
+        if(result == `win`){
+            playerScore++
+        } else if(result == 'lose'){
+            computerScore++
+        }
+        if(playerScore == 3) {
+            alert(`You win the game!`)
+        }
+    }
+}
 let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
 let playerChoice = playerChoiceCaseInsen.toLowerCase();
 let computerChoice = getComputerChoice()
