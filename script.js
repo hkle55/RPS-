@@ -9,22 +9,35 @@ function getComputerChoice(a= 3) {
     }
     }
 
-    function playRound(playerChoice, computerChoice) {
-        const outcomes = {
-            rock: {scissors: 'win', rock: 'tie', paper: 'lose'},
-            paper: {rock: 'win', paper: 'tie', scissors: 'lose'},
-            scissors: {paper: 'win', scissors: 'tie', rock: 'lose'}
-        };
-        const result = outcomes[playerChoice][computerChoice];
-        if (result === 'tie') {
-            return alert(`It's a tie! You both chose ${computerChoice}.`);
-        } else if (result === 'win') {
-            return alert(`You win! ${playerChoice} beats ${computerChoice}.`);
-        } else if (result === 'lose') {
-            return alert(`You lose! ${computerChoice} beats ${playerChoice}.`);
+function playRound(playerChoice, computerChoice) {
+    const outcome = {
+        rock: {
+            scissors: 'win',
+            rock: 'tie',
+            paper: 'lose'
+        },
+        paper: {
+            scissors: 'lose',
+            rock: 'win',
+            paper:'tie'
+        },
+        scissors: {
+            scissors: 'tie',
+            rock: 'lose',
+            paper: 'win'
         }
     }
-    
+    let result = outcome[playerChoice][computerChoice]
+    if(result == 'tie'){
+        return alert(`It's a tie you both chose ${computerChoice}!`)
+    } else if(result == `win`){
+        return alert(`Player wins! ${playerChoice} beats ${computerChoice}`)
+    } else if(result == `lose`){
+        return alert(`Player loses ${computerChoice} beats ${playerChoice}`)
+    }
+
+   
+    }
 
 let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
 let playerChoice = playerChoiceCaseInsen.toLowerCase();
