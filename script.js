@@ -56,6 +56,11 @@ function game() {
             break
         }
     }
+    if(playerScore == 3) {
+        alert(`You win the game!`)
+    } else if(computerScore == 3) {
+        alert(`You lost the game`)
+    }
 }
 let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
 let playerChoice = playerChoiceCaseInsen.toLowerCase();
