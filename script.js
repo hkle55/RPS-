@@ -9,7 +9,9 @@ function getComputerChoice(a= 3) {
     }
     }
 
-function playRound(playerChoice, computerChoice) {
+function playRound() {
+    let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
+    let playerChoice = playerChoiceCaseInsen.toLowerCase();
     const outcomes = {
         rock: {
             scissors: 'win',
