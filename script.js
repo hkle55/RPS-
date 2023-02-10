@@ -65,9 +65,7 @@ function game() {
         alert(`You lost the game`)
     }
 }
-let playerChoiceCaseInsen = prompt("Rock, Paper Or scissors?")
-let playerChoice = playerChoiceCaseInsen.toLowerCase();
-let computerChoice = getComputerChoice()
+
 
 
 
