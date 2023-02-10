@@ -29,6 +29,7 @@ function playRound() {
             paper: 'win'
         }
     }
+    let computerChoice = getComputerChoice()
     let result = outcomes[playerChoice][computerChoice]
     if(result == 'tie'){
         return alert(`It's a tie you both chose ${computerChoice}!`)
