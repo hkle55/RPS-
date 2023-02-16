@@ -51,26 +51,21 @@ function game() {
             playerScore++
         } else if(result == 'lose'){
             computerScore++
-        } else {
-            i--
-            continue
         }
         if(playerScore === 3 || computerScore === 3){
             break
         }
     }
     if(playerScore == 3) {
-        alert(`You win the game!`)
+        console.log(`You win the game!`)
     } else if(computerScore == 3) {
-        alert(`You lost the game`)
+        console.log(`You lost the game`)
     }
+    console.log(playerScore)
+    console.log(computerScore)
 }
 
 game()
 
 
 
-console.log(playRound(playerChoice,computerChoice))
-console.log(playerChoiceCaseInsen)
-console.log(playerChoice)
-console.log(computerChoice)
