@@ -31,14 +31,16 @@ function playRound() {
     }
     let computerChoice = getComputerChoice()
     let result = outcomes[playerChoice][computerChoice]
+    let message;
     if(result == 'tie'){
-        return alert(`It's a tie you both chose ${computerChoice}!`)
+        message = `It's a tie you both chose ${computerChoice}!`
     } else if(result == `win`){
-        return alert(`Player wins! ${playerChoice} beats ${computerChoice}`)
+        message = `Player wins! ${playerChoice} beats ${computerChoice}`
     } else if(result == `lose`){
-        return alert(`Player loses ${computerChoice} beats ${playerChoice}`)
+        message = `Player loses ${computerChoice} beats ${playerChoice}`
     }
-
+    alert(message)
+    return { result, playerChoice, computerChoice}
    
     }
 
@@ -46,7 +48,7 @@ function game() {
     let playerScore = 0 
     let computerScore = 0 
     for (let i = 0; i < 5; i++){
-        let result = playRound()
+        let {result, playerChoice, computerChoice } = playRound()
         if(result == `win`){
             playerScore++
         } else if(result == 'lose'){
