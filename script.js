@@ -45,6 +45,7 @@ function playRound() {
     }
 
 function game() {
+    alert("Play rock paper scissors! Its going to be a best of five first to three wins!")
     let playerScore = 0 
     let computerScore = 0 
     for (let i = 0; i < 5; i++){
@@ -62,7 +63,7 @@ function game() {
         }
     }
     if(playerScore == 3) {
-        console.log(`You win the game!`)
+        console.log(`You win the game! \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
     } else if(computerScore == 3) {
         console.log(`You lost the game \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
     }
