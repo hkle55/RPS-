@@ -39,7 +39,7 @@ function playRound() {
     } else if(result == `lose`){
         message = `Player loses ${computerChoice} beats ${playerChoice}`
     }
-    alert(message)
+    console.log(message)
     return { result, playerChoice, computerChoice}
    
     }
@@ -52,10 +52,13 @@ function game() {
         let {result, playerChoice, computerChoice } = playRound()
         if(result == `win`){
             playerScore++
+            console.log(`Current score: Player:${playerScore}\nComputer:${computerScore}`)
         } else if(result == 'lose'){
             computerScore++
+            console.log(`Current score: Player:${playerScore}\nComputer:${computerScore}`)
         } else {
             i--
+            console.log(`Current score: Player:${playerScore}\nComputer:${computerScore}`)
             continue
         }
         if(playerScore === 3 || computerScore === 3){
@@ -63,12 +66,11 @@ function game() {
         }
     }
     if(playerScore == 3) {
-        console.log(`You win the game! \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
+        alert(`You win the game! \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
     } else if(computerScore == 3) {
-        console.log(`You lost the game \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
+        alert(`You lost the game \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
     }
-    console.log(playerScore)
-    console.log(computerScore)
+    
 }
 
 game()
