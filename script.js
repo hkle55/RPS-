@@ -64,7 +64,7 @@ function game() {
     if(playerScore == 3) {
         console.log(`You win the game!`)
     } else if(computerScore == 3) {
-        console.log(`You lost the game`)
+        console.log(`You lost the game \nFinal score: You: ${playerScore} Computer: ${computerScore}`)
     }
     console.log(playerScore)
     console.log(computerScore)
